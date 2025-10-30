@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/sign.css">
+</head>
+
+<body>
+    <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+            <img src="img avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="Uname">
+                <b>username</b>
+            </label>
+            <input type="text" placeholder="EnterUsername" name="uname" required>
+            <label for="psw">
+                <b>password</b>
+            </label>
+            <input type="password" placeholder="password" name="psw" required>
+            <label for="number">
+                <b>Phone number</b>
+            </label>
+            <input type="Phone-number" placeholder="Phone number" name="Phone-number" required><br>
+            <label for="email-address">
+                <b>Email address</b>
+            </label>
+            <input type="email" placeholder="email" name="email" required><br>
+            <button type="submit">Sign up</button>
+        </div>
+
+        <div class="container" style="background-color: rgb(45, 219, 241);">
+            <button type="class" class="cancelbtn">Cancel</button>
+            <span class="psw">forgot <a href="#">password?</a></span>
+            <div class="switch">
+                <a href='login.html'><b>Already have an account </b></a>
+            </div>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"><b> Remeber me</b>
+            </label>
+        </div>
+    </form>
+</body>
+
+</html>

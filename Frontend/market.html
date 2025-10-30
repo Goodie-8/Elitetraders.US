@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markets | Elitetraders.US</title>
+<link rel="stylesheet" href="crypto.css">
+<style>
+body {
+  background-color: #031531;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+table {
+  width: 90%;
+  margin: 50px auto;
+  border-collapse: collapse;
+  background-color: #0a2540;
+  border-radius: 10px;
+  overflow: hidden;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+th {
+  background-color: #f65206;
+  color: #fff;
+}
+tr:nth-child(even) { background-color: #041f3d; }
+</style>
+</head>
+<body>
+<h1 style="text-align:center; color:#00FFFF; margin-top:30px;">Live Crypto Market</h1>
+<table id="crypto-table">
+<thead>
+<tr><th>Name</th><th>Price (USD)</th><th>Change (24h)</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script>
+fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
+  .then(res => res.json())
+  .then(data => {
+    const tbody = document.querySelector('#crypto-table tbody');
+    data.slice(0, 15).forEach(coin => {
+      const row = `<tr>
+        <td><img src="${coin.image}" width="25"> ${coin.name}</td>
+        <td>$${coin.current_price.toLocaleString()}</td>
+        <td style="color:${coin.price_change_percentage_24h > 0 ? 'lime' : 'red'}">
+        ${coin.price_change_percentage_24h.toFixed(2)}%</td>
+      </tr>`;
+      tbody.innerHTML += row;
+    });
+  });
+</script>
+</body>
+</html>

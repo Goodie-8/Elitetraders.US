@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs | Elitetraders.US</title>
+<link rel="stylesheet" href="crypto.css">
+<style>
+body { background-color: #031531; color: #fff; font-family: 'Poppins', sans-serif; }
+.faq-container { max-width: 900px; margin: 60px auto; }
+.faq { background-color: #0a2540; margin: 15px 0; border-radius: 10px; padding: 20px; cursor: pointer; }
+.faq h3 { color: #00FFFF; margin: 0; }
+.faq p { display: none; margin-top: 10px; color: #ccc; }
+.faq.active p { display: block; }
+</style>
+</head>
+<body>
+<h1 style="text-align:center; color:#f65206;">Frequently Asked Questions</h1>
+<div class="faq-container">
+  <div class="faq">
+    <h3>How do I start trading?</h3>
+    <p>Create an account, verify your identity, and fund your wallet to begin trading instantly.</p>
+  </div>
+  <div class="faq">
+    <h3>Is my investment safe?</h3>
+    <p>Yes, we use 256-bit SSL encryption and multi-layer authentication to protect your funds.</p>
+  </div>
+  <div class="faq">
+    <h3>How can I withdraw profits?</h3>
+    <p>Withdrawals are available anytime through your dashboard to any linked bank or wallet.</p>
+  </div>
+</div>
+<script>
+document.querySelectorAll('.faq').forEach(faq=>{
+  faq.addEventListener('click',()=>faq.classList.toggle('active'))
+})
+</script>
+</body>
+</html>

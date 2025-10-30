@@ -1,0 +1,87 @@
+body {
+    padding: 0%;
+    background-color: #031531;
+
+}
+
+
+form {
+    border: 3px solid rgba(0, 255, 255, 0.25);
+    border-radius: 15px;
+    width: 35%;
+    position: relative;
+    margin: 10% 40% 10% 30%;
+    background-color: rgba(0, 255, 255, 0.25);
+
+}
+
+input[type=text],
+input[type=password],
+input[type=Phone-number],
+input[type=email],
+input[type=home-address] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #1c2058;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgb(10, 8, 124);
+    color: rgb(14, 3, 73);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+    color: aqua;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: blue;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 12px;
+}
+
+img.avtar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+    border: none;
+    border-radius: 15px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.switch {
+    color: aqua;
+}
