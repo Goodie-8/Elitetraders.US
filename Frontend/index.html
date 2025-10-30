@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Elitetraders.US</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/form.css">
+  <link rel="stylesheet" href="/loader.css">
+  <link rel="stylesheet" href="/navbar2.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./qe3navbar2.css">
+  <link rel="stylesheet" href="./form.css">
+  <link rel="stylesheet" href="./loader.css">
+  <link rel="stylesheet" href="scroll.css" type="text/css" media="all" />
+  <style>
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark {
+      background-color: #111;
+      color: #19dfdf;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #04064e;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(54, 72, 238, 0.1);
+    }
+
+    body.dark header {
+      background-color: #cf3131;
+    }
+
+    .nav-logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ff6600, #ffcc00);
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .nav-logo span {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      color: #888;
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      margin-right: 15px;
+      font-size: 1.6rem;
+      color: #00ff55;
+      transition: transform 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.2);
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .bar {
+      width: 26px;
+      height: 3px;
+      background-color: #333;
+      border-radius: 3px;
+      transition: 0.4s;
+    }
+
+    body.dark .bar {
+      background-color: #2cbe19;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 70px;
+      right: -100%;
+      width: 250px;
+      background-color: #043247;
+      box-shadow: 0 4px 12px rgba(180, 34, 34, 0.1);
+      border-radius: 8px;
+      transition: right 0.3s ease;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 2000;
+    }
+
+    body.dark .nav-menu {
+      background-color: #ece3e3;
+    }
+
+    .nav-menu.active {
+      right: 10px;
+    }
+
+    .nav-menu a,
+    .nav-menu button {
+      color: inherit;
+      text-decoration: none;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .controls-inline {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        width: 85%;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-logo">Elitetraders.<span>US</span></div>
+    <div class="header-right">
+      <i class="fa fa-lightbulb-o theme-toggle" id="themeToggle"></i>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </header>
+  <ul class="nav-menu" id="navMenu">
+    <div class="controls-inline">
+      <a href="./sign.html"><button>Sign Up</button></a>
+      <a href="./login.html"><button>Log In</button></a>
+    </div>
+
+    <a href="./testimonial.html">Testimonials</a>
+    <a href="./about.html">About Us</a>
+    <a href="./blog.html">Blog</a>
+    <a href="./market.html">Market</a>
+    <a href="./faqs.html">FAQs</a>
+    <a href="./contact.html">Contact</a>
+  </ul>
+  <div class="preloader"><span class="loader"></span></div>
+  <div class="call"><i class="fa fa-telegram" style="font-size: 60px; color: #f65206;"></i></div>
+  <article class="art1">
+    <h1>
+      Buy & Sell Digital Assets <br> With <span id="root" class="logo_a">Elitetraders.US</span>
+      <div class="h_para">
+        At <span id="root">Elitetraders</span>, we provide you with cutting-edge tools, insights, and resources
+        to navigate the dynamic world of stock marketing, ETFs and cryptocurrency.
+      </div>
+      <a href="./sign.html"><button class="get_start">Get Started</button></a>
+    </h1>
+    <img src="./ppl.jpg" alt="" class="para_pic" />
+  </article>
+  <article class="art2 fade-up">
+    <h1 class="feat">Our Features</h1>
+    <div class="tiles">
+      <div class="fade-in-section">
+        <article class="tile">
+          <div class="tile-header">
+            <i class="ph-lightning-light"></i>
+            <h2>
+              <span></span>
+              <span>Expert Market Insights</span>
+            </h2>
+          </div>
+          <ul>
+            <li>Timely market analysis and report</li>
+            <li>Expert opinions from seasonedfinancial anlysis</li>
+            <li>Data-driven Investment recommendatio</li>
+          </ul>
+        </article>
+      </div>
+      <div class="fade-in-section">
+        <article class="tile">
+          <div class="tile-header">
+            <i class="ph-fire-simple-light"></i>
+            <h2>
+              <span></span>
+              <span>Diversified Investment Options</span>
+            </h2>
+          </div>
+          <ul>
+            <li>Stocks, Bonds, Mutual Funds,ETFs and more</li>
+            <li>Access to Local and International Markets</li>
+            <li>Tailored Investment Options</li>
+          </ul>
+
+        </article>
+      </div>
+      <div class="fade-in-section">
+        <article class="tile">
+          <div class="tile-header">
+            <i class="ph-file-light"></i>
+            <h2>
+              <span></span>
+              <span>Advanced Security Measures</span>
+            </h2>
+          </div>
+          <ul>
+
+            <li>256-bit SSL encryption</li>
+            <li>Two-factor authentication</li>
+
+            <li>Regular Security Audits</li>
+          </ul>
+
+        </article>
+      </div>
+      <div class="fade-in-section">
+        <article class="tile">
+          <div class="tile-header">
+            <i class="ph-file-light"></i>
+            <h2>
+              <span></span>
+              <span>User friendly Interface</span>
+            </h2>
+          </div>
+          <ul>
+            <li>Intuitive Dashbord and Easy Portfolio Management</li>
+            <li>Real time Market Updatrs abd Alerts</li>
+            <li>Data-driven Investment recommendatio</li>
+          </ul>
+
+        </article>
+      </div>
+      <div class="fade-in-section">
+
+        <article class="tile">
+          <div class="tile-header">
+            <i class="ph-file-light"></i>
+            <h2>
+              <span></span>
+              <span>Competitve fees</span>
+            </h2>
+          </div>
+          <ul>
+            <li>Low Commission Rates</li>
+            <li>No Hidden Fees</li>
+            <li>Volume Discounts</li>
+          </ul>
+
+        </article>
+      </div>
+      <div class="fade-in-section">
+        <article class="tile">
+          <div class="tile-header">
+            <i class="ph-file-light"></i>
+            <h2>
+              <span></span>
+              <span>Personalized Support</span>
+            </h2>
+          </div>
+          <ul>
+            <li>Dedicated Account Managers</li>
+            <li>24/7 Customer Support</li>
+            <li>Educational Resources</li>
+
+          </ul>
+
+        </article>
+      </div>
+    </div>
+    </span>
+  </article>
+  <div class="ticker-container">
+
+    <!-- TradingView Widget BEGIN -->
+
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" `
+        async>
+          {
+            "symbols"[
+              {
+                "proName": "BITSTAMP:BTCUSD",
+                "title": "Bitcoin"
+              },
+              {
+                "proName": "BITSTAMP:ETHUSD",
+                "title": "Ethereum"
+              },
+              {
+                "proName": "COINBASE:LTCEUR",
+                "title": "Litecoin"
+              }
+            ]
+            [
+              "colorTheme": "light",
+                "isTransparent": false,
+                  "displayMode": "adaptive",
+                    "locale": "en", 
+        ]
+          } 
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+  </div>
+  </article>
+  <article class="art3 fade-in">
+    <h1>Why Invest With Us?</h1>
+    <!-- existing invest section kept same -->
+    <div class="tiles">
+      <div class="fade-in-section">
+        <div class="tile">
+          <h2>Proven Track Record</h2>
+          <p>Our company has a history of delivering consistent and strong returns for our investors. Over the
+            years, we have built a reputation for reliability and success in the market.</p>
+        </div>
+      </div>
+
+      <div class="fade-in-section">
+        <div class="tile">
+          <h2>Expert Management Team</h2>
+          <p>Our experienced management team is composed of industry veterans who possess deep knowledge and
+            expertise. They are dedicated to making well-informed decisions to maximize your investments.
+          </p>
+        </div>
+      </div>
+
+      <div class="fade-in-section">
+        <div class="tile">
+          <h2>Transparent Operations</h2>
+          <p>We believe in full transparency with our investors. Our detailed reports and regular updates
+            ensure you are always informed about where and how your money is being used.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+  </article>
+  <section class="calltoact">
+    Discover how EliteTraders can help you achieve your investment goals
+    <a href="./sign.html"><button>Sign Up</button></a>
+  </section>
+  <footer>
+    <div class="company" id="f">
+      <b>Company</b><br>
+      <a href="faqs">FAQs</a><br>
+      <a href="contact">Contact Us</a><br>
+      <a href="t&c">Terms and Conditions</a><br>
+      <a href="privacystats">Privacy Statement</a><br>
+    </div>
+    <div class="products" id="f">
+      <b>Products</b><br>Stock Trading<br>Money Market Fund<br>Education Trust
+    </div>
+    <div class="research" id="f">
+      <b>Research</b><br>Market News<br>Pan African Monitor <br>Education Trust
+    </div>
+    <div class="icons">
+      <i class="fa fa-facebook-square" style="font-size:24px; color: grey;"></i>
+      <i class="fa fa-instagram" style="font-size:24px; color: grey;"></i>
+      <i class="fa fa-telegram" style="font-size:24px; color: grey;"></i>
+    </div>
+    <p>&copy; 2024 EliteTraders. All rights reserved.</p>
+  </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-in, .fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
