@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials | Elitetraders.US</title>
+<link rel="stylesheet" href="crypto.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+body {
+  background-color: #031531;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 50px 20px;
+}
+h1 {
+  color: #f65206;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+.testimonial {
+  background: rgba(10,37,64,0.85);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.1);
+  transition: 0.3s;
+}
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0,255,255,0.25);
+}
+.testimonial img {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  border: 3px solid #00FFFF;
+}
+.name { color: #00FFFF; font-weight: 600; margin-top: 10px; }
+.country { color: #aaa; font-size: 0.9rem; }
+.comment { color: #ddd; font-style: italic; margin-top: 15px; }
+</style>
+</head>
+<body>
+<h1 data-aos="fade-up">What Our Traders Say</h1>
+<div class="testimonial-grid">
+  <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+    <img src="user1.jpg" alt="">
+    <div class="name">James A.</div>
+    <div class="country">🇺🇸 United States</div>
+    <p class="comment">"Elitetraders.US helped me turn my crypto hobby into a consistent income stream. Their insights are unmatched."</p>
+  </div>
+
+  <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+    <img src="user2.jpg" alt="">
+    <div class="name">Chioma E.</div>
+    <div class="country">🇳🇬 Nigeria</div>
+    <p class="comment">"The analysis tools and user experience are top-notch. My portfolio grew 45% in just 3 months!"</p>
+  </div>
+
+  <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+    <img src="user3.jpg" alt="">
+    <div class="name">Lucas R.</div>
+    <div class="country">🇧🇷 Brazil</div>
+    <p class="comment">"The best trading community I’ve joined. Transparent, real-time data, and reliable withdrawals."</p>
+  </div>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>

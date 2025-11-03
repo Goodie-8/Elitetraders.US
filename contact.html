@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Elitetraders.US</title>
+  <link rel="stylesheet" href="crypto.css">
+  <style>
+    body {
+      background-color: #031531;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 60px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    form {
+      background-color: #0a2540;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    button {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      border: none;
+      color: #a74d4d;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .map {
+      background-color: #0a2540;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /*===== FIX: Make contact form text visible ===== */
+    .contact-form input,
+    .contact-form textarea {
+      background: #ffffff;
+      /* White background */
+      color: #111111;
+      /* Dark text color */
+      border: 1px solid #ccc;
+      padding: 0.8rem;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    /* When typing (focused) */
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #0078ff;
+      /* Highlight border */
+      background: #fff;
+      color: #000;
+    }
+
+    /* Fix for dark mode (optional) */
+    body.dark .contact-form input,
+    body.dark .contact-form textarea {
+      background: #222;
+      color: #fff;
+      border: 1px solid #555;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="text-align:center; color:#f65206;">Get in Touch</h1>
+  <div class="contact-container">
+    <section id="contact" class="contact-section">
+      <h2>Contact US</h2>
+      <p>Fill out the form below to get in touch - We'll respond shortly!</p>
+      <div class="" <form>
+        <h3 style="color:#00FFFF;">Send us a Message, we'll get back to you soon!</h3>
+        <form action="https://formspree.io/f/xblzvvvv" method="POST" class="contact-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+    </section>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="400" style="border:0;"
+        allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</body>
+
+</html>
